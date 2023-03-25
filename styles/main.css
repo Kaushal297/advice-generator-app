@@ -1,0 +1,37 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-light-cyan: hsl(193, 38%, 86%);
+    --clr-neon-green: hsl(150, 100%, 66%);
+    --clr-grayish-blue: hsl(217, 19%, 38%);
+    --clr-dark-grayish-blue: hsl(217, 19%, 24%);
+    --clr-dark-blue: hsl(218, 23%, 16%);
+
+    --clr-black: hsl(0, 0%, 0%);
+    --clr-white: hsl(0, 0%, 100%);
+
+    --clr-attribution : hsl(228, 45%, 44%);
+
+    --fs-quote: 1.75rem;
+}
+
+body {
+    font-size: 62.5%;
+    font-family: 'Manrope', sans-serif;
+}
+
+/* frontend mentor styles */
+.attribution {
+    font-size: 0.6875rem;
+    text-align: center;
+}
+
+.attribution a {
+    color: var(--clr-attribution);
+}
+/* end of frontend mentor styles */
