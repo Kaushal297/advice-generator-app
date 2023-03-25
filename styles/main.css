@@ -23,15 +23,142 @@
 body {
     font-size: 62.5%;
     font-family: 'Manrope', sans-serif;
+    background-color: var(--clr-dark-blue);
+    color: var(--clr-light-cyan);
+}
+
+.main-container {
+    height: 100dvh;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    flex-direction: column;
+}
+
+.main-container__advice-container {
+    flex-grow: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.advice-card {
+    padding: 3.25rem 3.125rem 4.5rem;
+    border-radius: 0.9375rem;
+
+    position: relative;
+
+    text-align: center;
+    background-color: var(--clr-dark-grayish-blue);
+}
+
+.advice-card--disable::after {
+    content: '';
+    height: 85%;
+    width: 100%;
+    border-radius: 15px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-color: #303a49;
+}
+
+
+.adivce-heading {
+    text-transform: uppercase;
+    letter-spacing: 1.65px;
+    font-weight: 400;
+    font-size: 0.6875rem;
+    color: var(--clr-neon-green);
+}
+
+.advice-description {
+    width: 27.75rem;
+    margin: 2.25rem 0;
+
+    font-size: var(--fs-quote);
+    animation: slideUp 3s;
+}
+
+.advice-description::before {
+    content: open-quote;
+}
+
+.advice-description::after {
+    content: close-quote;
+}
+
+.mob-pattern-divider {
+    display: none;
+}
+
+.advice-generate {
+    padding: 1.25rem;
+    border-radius: 50%;
+
+    position: absolute;
+    bottom: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background-color: var(--clr-neon-green);
+    cursor: pointer;
+}
+
+.advice-generate:hover {
+    box-shadow: 0 0 3.125rem var(--clr-neon-green);
+}
+
+.advice-generate svg {
+    display: block;
 }
 
 /* frontend mentor styles */
-.attribution {
+.main-container__attribution {
     font-size: 0.6875rem;
     text-align: center;
 }
 
-.attribution a {
+.main-container__attribution a {
     color: var(--clr-attribution);
 }
 /* end of frontend mentor styles */
+
+@keyframes slideUp {
+    from {
+        transform: translateY(1.875rem);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .main-container {
+        gap: 3.5rem;
+    }
+
+    .advice-card {
+        padding: 2.25rem 1.5rem 4.5rem;
+    }
+
+    .advice-description {
+        width: 18.4375rem;
+    }
+
+    .mob-pattern-divider {
+        display: block;
+    }
+
+    .desk-pattern-divider {
+        display: none;
+    }
+}
