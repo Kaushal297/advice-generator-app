@@ -83,6 +83,7 @@ body {
     width: 27.75rem;
     margin: 2.25rem 0;
 
+    font-weight: 800;
     font-size: var(--fs-quote);
     animation: slideUp 3s;
 }
